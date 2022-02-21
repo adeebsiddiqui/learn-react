@@ -1,17 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'; //Implicitly imported in latest React libraries, explicit import not needed
+import ReactDOM from 'react-dom'; // importing ReactDOM objct from react-dom library
+
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App />, document.getElementById('root'));
+//App is a component. A React component is nothing but a function that returns some JSX code
