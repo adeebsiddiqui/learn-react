@@ -1,5 +1,3 @@
-import React from 'react'; //Implicitly imported in latest React libraries, explicit import not needed
-
 import Expenses from './components/Expenses/Expenses';
 
 const App = () => { //can be also written as function App() {}

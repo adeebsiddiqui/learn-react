@@ -1,5 +1,4 @@
-import React from 'react'; //Implicitly imported in latest React libraries, explicit import not needed
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'; // importing ReactDOM objct from react-dom library
 
 import './index.css';
 import App from './App';

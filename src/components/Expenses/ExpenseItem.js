@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react'; //import with {} are named imports which means only import specific function from library
 // 'useState' hook is used for managing state of React components
 
 import ExpenseDate from './ExpenseDate';
@@ -6,13 +6,13 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
-  const [title, setTitle] = useState(props.title); //React registers the 'props.title' value into its state and manages it for a ExpenseItem component instance
+  const [title, setTitle] = useState(props.title); //React registers the 'props.title' initial value into its state variable 'title' and manages it for a ExpenseItem component instance
   //Array destructuring - feature of modern JS
 
   console.log('ExpenseItem evaluated'); //watch the number of times this is logged when page is loaded first and after each click event
 
   const clickHandler = () => { //good practice to end event handler function names with 'Handler' after event name
-    setTitle('Updated!'); //when called, sets the value 'Updated!' to the variable title and reexecutes the ExpenseItem component function
+    setTitle('Updated!'); //when called, sets the value 'Updated!' to the state variable 'title' and re-executes the ExpenseItem component function
     console.log(title); // old value still being logged
     // call to state update function above doesn't change the value right away but instead schedules it, so in this line the new value is not available yet
   }

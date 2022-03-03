@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card'; //import without extension means its .js file import
 import './Expenses.css';
