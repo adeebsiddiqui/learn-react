@@ -1,13 +1,15 @@
 import { useState } from 'react'; //import with {} are named imports which means only import specific function from library
-// 'useState' hook is used for managing state of React components
+// 'useState' hook is used for managing state of React components. Read README
 
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
-  const [title, setTitle] = useState(props.title); //React registers the 'props.title' initial value into its state variable 'title' and manages it for a ExpenseItem component instance
   //Array destructuring - feature of modern JS
+  const [title, setTitle] = useState(props.title); //React registers the 'props.title' initial value into its state variable 'title'
+  //and manages it through 'setTitle()' state function for each ExpenseItem component instance
+  //state variable and function names are completely arbitrary
 
   console.log('ExpenseItem evaluated'); //watch the number of times this is logged when page is loaded first and after each click event
 

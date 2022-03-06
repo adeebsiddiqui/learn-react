@@ -1,4 +1,5 @@
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => { //can be also written as function App() {}
   const expenses = [
@@ -23,6 +24,11 @@ const App = () => { //can be also written as function App() {}
     },
   ];
 
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  };
+
   // return React.createElement(
   //   'div',
   //   {},
@@ -32,7 +38,7 @@ const App = () => { //can be also written as function App() {}
 
   return ( // HTML looking code below is actually JSX which represents the JS code above which does the final JS code transformation in the browser
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense onAddExpense={addExpenseHandler} /> {/* Child-to-Parent componenet communication, see NewExpense:16 for details */}
       <Expenses items={expenses} /> {/*expenses array is passed as 'items' props in Expenses component*/}
     </div>
   );
