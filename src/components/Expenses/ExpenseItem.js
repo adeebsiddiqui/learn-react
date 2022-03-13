@@ -17,6 +17,7 @@ const ExpenseItem = (props) => {
     setTitle('Updated!'); //when called, sets the value 'Updated!' to the state variable 'title' and re-executes the ExpenseItem component function
     console.log(title); // old value still being logged
     // call to state update function above doesn't change the value right away but instead schedules it, so in this line the new value is not available yet
+    // That's why if updating a state depends on previous state then better use function inside the state update function to update the state. Lecture: 56
   }
 
   return (
