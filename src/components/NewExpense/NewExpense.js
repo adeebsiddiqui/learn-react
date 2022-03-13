@@ -5,7 +5,7 @@ const NewExpense = (props) => {
 
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
-      ...enteredExpenseData,
+      ...enteredExpenseData, // ... is the standard JS 'spread operator', ref: https://www.w3schools.com/react/react_es6_spread.asp
       id: Math.random().toString()
     };
     props.onAddExpense(expenseData); //calls the 'addExpenseHandler()' in parent component App:27 with 'expenseData'
