@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
 import ExpensesFilter from './ExpensesFilter';
+import ExpensesList from './ExpensesList';
 
 import './Expenses.css';
 
@@ -16,23 +16,11 @@ const Expenses = (props) => {
 
   const filteredExpenses = props.items.filter(expense => expense.date.getFullYear().toString() === filteredYear);
 
-  let expensesContent = <p>No expenses found.</p>; // We can assign JSX code in variables outside of return function of Component
-
-  if (filteredExpenses.length > 0) {
-    expensesContent = filteredExpenses.map(expense => //using map() function to loop though list of expenses
-      <ExpenseItem
-        key={expense.id} //Comment out and check console output. See note below
-        title={expense.title}
-        amount={expense.amount}
-        date={expense.date}
-      />)
-  }
-
   return (
     <div>
-      <Card className="expenses"> {/*applies the Card.css from Card component along with Expenses.css */}
+      <Card className='expenses'> {/*applies the Card.css from Card component along with Expenses.css */}
         <ExpensesFilter selected={filteredYear} onFilterChange={filterChangeHandler} />
-        {expensesContent}
+        <ExpensesList items={filteredExpenses} />
       </Card>
     </div>
     /* 'key' is a special React prop that should be added to a component or HTML element which is used to display elements of a list by looping through it.
