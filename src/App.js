@@ -33,7 +33,7 @@ const App = () => { //can be also written as function App() {}
   // );
 
   return ( // HTML looking code below is actually JSX which represents the JS code above which does the final JS code transformation in the browser
-    <div>
+    <div> {/*There always must be only one root element in return statement of React components*/}
       <h2>Let's get started!</h2>
       <Expenses items={expenses} /> {/*expenses array is passed as 'items' props in Expenses component*/}
     </div>
