@@ -8,6 +8,7 @@ const Card = (props) => {
   return <div className={classes}>{props.children}</div>;
   // 'children' is a reserved keyword, the value of which is the content between the openening and closing tags of Card component wherever its used
   // We need to use 'props.children' because unlike HTML tags, Custom components can't wrap other contents by default
+  // Full lecture - Maximilian Schwarzmüller - The Concept of "Composition" ("children props")
 };
 
 export default Card;

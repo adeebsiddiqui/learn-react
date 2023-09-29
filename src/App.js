@@ -36,6 +36,7 @@ const App = () => { //can be also written as function App() {}
     <div> {/*There always must be only one root element in return statement of React components*/}
       <h2>Let's get started!</h2>
       <Expenses items={expenses} /> {/*expenses array is passed as 'items' props in Expenses component*/}
+      {/*We can write JS expressions inside JSX code snippets using curly braces e.g. <h2>{3+2}</h2> which will display 5 in browser*/}
     </div>
   );
 }
