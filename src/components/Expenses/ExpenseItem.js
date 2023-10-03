@@ -6,10 +6,11 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
-  //Array destructuring - feature of modern JS
-  const [title, setTitle] = useState(props.title); //React registers the 'props.title' initial value into its state variable 'title'
-  //and manages it through 'setTitle()' state function for each ExpenseItem component instance
-  //state variable and function names are completely arbitrary
+  //Array destructuring in JS, ref: https://www.w3schools.com/react/react_es6_destructuring.asp
+  const [title, setTitle] = useState(props.title);
+  /*useState() needs an initial state value as its only argument and it returns an array with exactly 2 values: the current state and a function that updates it.
+  Here, React registers the 'props.title' initial value into its state variable 'title' and manages it through 'setTitle()' state function for each ExpenseItem component instance.
+  state variable and function names are completely arbitrary.*/
 
   console.log('ExpenseItem evaluated'); //watch the number of times this is logged when page is loaded first and after each click event
 
@@ -29,7 +30,8 @@ const ExpenseItem = (props) => {
       </div>
       <button onClick={clickHandler}>Change Title</button> {/*Event name (e.g. click) should start with uppercase character after 'on'*/}
       {/*onClick EventListener should just point to handler function 'clickHandler' without any '()', even if it was written with the 'function' keyword.
-      If written as 'clickHandler()', JS will execute the function when line 19 is parsed while returning the evaluated JSX code, not when click occurs*/}
+      If written as 'clickHandler()', JS will execute the function when line 19 is parsed while returning the evaluated JSX code, not when click occurs.*/}
+                                                        {/*Google 'React Events' to know more*/}
     </Card>
   );
 }

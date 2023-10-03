@@ -36,9 +36,10 @@ const ExpenseForm = (props) => {
       date: new Date(enteredDate),
     };
 
-    props.onSaveExpenseData(expenseData);
-    /* this calls the 'saveExpenseDataHandler()' in parent component NewExpense:6 with 'expenseData'.
+    props.onSaveExpenseData(expenseData); /* this calls the 'saveExpenseDataHandler()' in parent component NewExpense:6 with 'expenseData'.
     This is how Child-to-Parent componenet communication happens through 'event props' */
+
+    // Clear form fields when form is submitted using 2-Way binding
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
