@@ -7,41 +7,23 @@ const ExpenseForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
 
-  /* Example of using one state instead of using multiple states above  */
-  // const [userInput, setUserInput] = useState({
-  //   enteredTitle: '',
-  //   enteredAmount: '',
-  //   enteredDate: '',
-  // });
 
   const titleChangeHandler = (event) => { //'event' is a default JS object provided by the browser whenever we listen to events on HTML elements
     console.log(event); // to check how the 'event' object looks like
     setEnteredTitle(event.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   enteredTitle: event.target.value,
-    // });
-    // setUserInput((prevState) => {
-    //   return { ...prevState, enteredTitle: event.target.value };
-    // });
   };
 
   const amountChangeHandler = event => {
-    console.log(event); // to check how the 'event' object looks like
+    console.log(event);
     setEnteredAmount(event.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   enteredAmount: event.target.value,
-    // });
+
+    /* If new state depends on previous state then a callback function is sent as an argument to the "Update State" functions */
+    //setEnteredAmount( prevState => prevState + event.target.value);
   };
 
   const dateChangeHandler = event => {
-    console.log(event); // to check how the 'event' object looks like
+    console.log(event);
     setEnteredDate(event.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   enteredDate: event.target.value,
-    // });
   };
 
   const submitHandler = (event) => { // 'submit event' emitted by form
