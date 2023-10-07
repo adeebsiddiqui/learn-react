@@ -25,7 +25,7 @@ const Expenses = (props) => {
     </div>
     /* 'key' is a special React prop that should be added to a component or HTML element which is used to display elements of a list by looping through it.
     It is used by React to uniquely identify each element of the list, not using 'key' props may lead to bug and performance issues.
-    Not a must but for more info Lecture:66 */
+    Not a must but for more info see lecture: 'Understanding "Keys"' */
   );
 }
 

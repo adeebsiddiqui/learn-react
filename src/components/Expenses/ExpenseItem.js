@@ -1,6 +1,3 @@
-import { useState } from 'react'; //import with {} are named imports which means only import specific function from library
-// 'useState' hook is used for managing state of React components. Read README
-
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 import './ExpenseItem.css';
