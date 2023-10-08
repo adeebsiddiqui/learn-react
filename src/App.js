@@ -31,7 +31,7 @@ const App = () => {
     //setExpenses([expense, ...prevExpenses]); //improper way
     setExpenses(prevExpenses => [expense, ...prevExpenses]); // ... is the standard JS 'spread operator', ref: https://www.w3schools.com/react/react_es6_spread.asp
     /* Use function inside state-update function (i.e. setExpenses) when state update depends on its previous state.
-    'prevExpenses' in that inner function which automatically holds the previous state snapshot. Lecture: 56*/
+    'prevExpenses' in that inner function which automatically holds the previous state snapshot. Lecture: Updating state that depends on the previous state */
   };
 
   return (

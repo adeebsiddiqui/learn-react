@@ -21,7 +21,7 @@ const NewExpense = (props) => {
     <div className='new-expense'>
       {!displayForm && <button onClick={showFormHandler}>Add New Expense</button>}
       {displayForm && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onHideForm={hideFormHandler} />}
-      {/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND */}
+      {/* In JS, If any value or HTML element is used as an expression after the '&&' operator then that value/HTML expression is returned if the condition before '&&' operator is TRUE*/}
     </div>
   );
 };
