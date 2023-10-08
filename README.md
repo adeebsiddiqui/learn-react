@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+This project follows the code examples from Academind's [react-complete-guide-code](https://github.com/academind/react-complete-guide-code) Udemy course.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
